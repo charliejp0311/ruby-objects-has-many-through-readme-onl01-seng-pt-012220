@@ -20,4 +20,18 @@ class Waiter
     Meal.new(self, customer, total, tip)
   end
 
+  def meals 
+    Meal.all.select{|meal| meal.waiter == self}
+  end
+
+  def customers
+    custies = []
+    Meal.all.each do |meal|
+      if meal.waiter == self
+        custies << meal.customer
+      end
+    end
+    custies
+  end
+
 end

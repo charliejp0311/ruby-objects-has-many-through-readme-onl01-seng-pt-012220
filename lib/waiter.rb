@@ -5,11 +5,11 @@ class Waiter
   def initialize(name, years_of_experience)
     @name = name
     @years_of_experience = years_of_experience
-    save 
+    save
   end
 
-  def save 
-    @@all << self     
+  def save
+    @@all << self
   end
 
 end

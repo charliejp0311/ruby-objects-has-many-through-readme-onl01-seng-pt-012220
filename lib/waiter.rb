@@ -38,7 +38,7 @@ class Waiter
     best = nil
     Meal.all.each do |meal|
       if best.tip < meal.tip
-        best = meal 
+        best = meal
       end
     end
     best.customer

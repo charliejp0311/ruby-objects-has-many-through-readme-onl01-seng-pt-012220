@@ -34,4 +34,14 @@ class Waiter
     custies
   end
 
+  def best_tipper
+    best = nil
+    Meal.all.each do |meal|
+      if best.tip < meal.tip
+        best = meal 
+      end
+    end
+    best.customer
+  end
+
 end
